@@ -33,8 +33,13 @@
 </head>
 
 <body>
-<%= yield %>
-    
+    <!-- Partials faz com que carregue parte de outro site nesta mesma pagina.-->
+    <%= render partial: "layouts/site_shared/navigation" %>
+    <!--Carregará o yield e continuará mostrando a partial footer.-->
+    <%= yield %>
+    <%= render partial: "layouts/site_shared/footer" %>
+    <!--PS: Os arquivos por serem Partials, devem possuir no nome do arquivo um _ seguido do nome.
+    Ao chamar no helper não pode informar o _. Caso tenha o _ apresentará erro e não encontrará o arquivo.-->
 </body>
 
 </html>

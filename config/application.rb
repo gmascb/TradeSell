@@ -28,6 +28,9 @@ module Workspace
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     config.i18n.default_locale = :"pt-BR"
+    
+    #Tentativa de remover o erro do RunProject do C9. Tentar permitir o ip.
+    config.web_console.whitelisted_ips = '201.17.159.47'
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
